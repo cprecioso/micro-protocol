@@ -32,9 +32,9 @@ export const getProtocol = (
 }
 
 const protocol = <I extends IncomingMessage, R extends ServerResponse>(
-  innerListener: (req: I & { protocol?: string }, res: R) => void,
+  innerListener: (req: I & { protocol?: string }, res: R) => Promise<void>,
   options?: Partial<Options>
-): ((req: I, res: R) => void) => {
+): ((req: I, res: R) => Promise<void>) => {
   const _options: Options = { trustProxy: false, ...options }
   const trustFn =
     typeof _options.trustProxy === "function"
