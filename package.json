@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@cprecioso/tsconfig": "^0.0.4",
-    "@types/node": "^12.12.8",
+    "@types/node": "^13.13.1",
     "@wessberg/rollup-plugin-ts": "^1.1.78",
     "rollup": "^1.27.0",
     "typescript": "^3.7.2"
